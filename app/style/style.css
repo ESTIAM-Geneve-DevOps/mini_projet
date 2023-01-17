@@ -1,0 +1,28 @@
+html{
+    background-color: black;
+    font: bold 1.2em "Lucida Console", sans-serif;
+}
+form {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+}
+label{
+    color: white;
+}
+.container{
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+}
+.clign{
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+@keyframes clignoter {
+    0%   { opacity:1; }
+    40%   {opacity:0; }
+    100% { opacity:1; }
+}
