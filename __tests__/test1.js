@@ -1,13 +1,13 @@
-const isPrime = require('../isPrime');
+const premier = require('../app/commands/premier.js');
 
 test('5 should be prime', () => {
-  expect(isPrime("5")).toBe(true);
+  expect(premier("5")).toBe("true");
 });
 
 test('6 should not be prime', () => {
-  expect(isPrime("6")).toBe(false);
+  expect(premier("6")).toBe("false");
 });
 
 test('negative numbers should not be prime', () => {
-  expect(isPrime("-5")).toBe(false);
+  expect(premier("-5")).toBe("false");
 });
