@@ -1,0 +1,14 @@
+{
+  "name": "mini_projet",
+  "version": "1.0.0",
+  "description": "mini_projet_devops",
+  "main": "test1.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Fabrice Hategekimana",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
