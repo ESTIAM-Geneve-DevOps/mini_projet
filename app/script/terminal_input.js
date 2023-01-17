@@ -1,5 +1,7 @@
-function terminal_input() {
+function terminal_input(input = null) {
+  if (input == null) {
     var input = document.getElementById("inputCommand").value;
+  }
     var command = input.split(" ")[0];
     var argument = input.split(" ")[1];
     switch (command) {
