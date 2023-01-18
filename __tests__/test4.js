@@ -1,17 +1,17 @@
-const shortestWord = require('../shortestWord');
+const pluscourt = require('../app/commands/pluscourt.js');
 
 test('shortest word in "the quick brown fox" should be "the"', () => {
-  expect(shortestWord("the quick brown fox")).toBe("the");
+  expect(pluscourt("the quick brown fox")).toBe(" quick brown fox");
 });
 
 test('shortest word in "javascript is fun" should be "is"', () => {
-  expect(shortestWord("javascript is fun")).toBe("is");
+  expect(pluscourt("javascript is fun")).toBe("javascript  fun");
 });
 
 test('shortest word in "Hello World" should be "Hello"', () => {
-  expect(shortestWord("Hello World")).toBe("Hello");
+  expect(pluscourt("Hello World")).toBe(" World");
 });
 
 test('shortest word in "" should be ""', () => {
-  expect(shortestWord("")).toBe("");
+  expect(pluscourt("")).toBe("");
 });

@@ -1,21 +1,21 @@
-const isEven = require('../isEven');
+const estpair = require('../app/commands/estpair.js');
 
 test('check if "2" is even should be true', () => {
-  expect(isEven("2")).toBe(true);
+  expect(estpair("2")).toBe(true);
 });
 
 test('check if "3" is even should be false', () => {
-  expect(isEven("3")).toBe(false);
+  expect(estpair("3")).toBe(false);
 });
 
 test('check if "-4" is even should be true', () => {
-  expect(isEven("-4")).toBe(true);
+  expect(estpair("-4")).toBe(true);
 });
 
 test('check if "0" is even should be true', () => {
-  expect(isEven("0")).toBe(true);
+  expect(estpair("0")).toBe(true);
 });
 
 test('check if "0" is even should be true', () => {
-  expect(isEven("hey")).toBe(false);
+  expect(estpair("hey")).toBe(false);
 });

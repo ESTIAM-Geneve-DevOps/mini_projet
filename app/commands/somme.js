@@ -3,7 +3,7 @@ function somme(args)
     if(args == "")
         return 0;
     let somme = 0;
-    let chaine = args.replaceAll(' ','');
+    let chaine = args.split(' ').join('');
 
     // tests if string contains digits (integers) only
     if(Number.isInteger(parseInt(chaine)))
