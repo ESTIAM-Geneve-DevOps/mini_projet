@@ -1,0 +1,27 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+    - name: Install dependencies
+      run: npm ci
+    - name: Test
+      run: npm test
+Dans cet exemple, nous avons configuré le workflow pour s'exécuter uniquement lorsque des modifications sont apportées à la branche dev. Nous utilisons également l'action "actions/setup-node" pour installer une version spécifique de Node.js (14 dans ce cas) et l'action "actions/checkout" pour récupérer le code source du dépôt. Enfin, nous utilisons les commandes npm ci et npm test pour installer les dépendances et exécuter les tests de votre application.
+
+Enregistrez et commit le fichier de configuration de votre pipeline de CI. Lorsque des modifications seront apportées à la branche dev, GitHub Actions déclenchera automatiquement une exécution de votre pipeline
+
+
+Stop generating
