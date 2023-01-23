@@ -1,4 +1,4 @@
-import {terminal_input} from "app/script/terminal_input.json"
+import { terminal_input } from "/app/script/terminal_input.js";
 
 const express = require('express');
 const app = express();
@@ -6,10 +6,10 @@ const PORT = 3000;
 
 app.use( express.json() )
 
-app.get('/premier/ ', (req, res) => {
-    terminal_input(req);
+app.get('/', (req, res) => {
+    console.log(terminal_input(req));
     res.send ({
-        "Valeur envoyéé avec succes"
-    })
+
+    });
 });
 

@@ -1,7 +1,7 @@
-function terminal_input(input = null) {
-  if (input == null) {
-    var input = document.getElementById("inputCommand").value;
-  }
+export function terminal_input(input) {
+    if (input == null) {
+      var input = document.getElementById("inputCommand").value;
+    }
     var command = input.split(" ")[0];
     var argument = input.split(" ")[1];
     switch (command) {
@@ -13,4 +13,4 @@ function terminal_input(input = null) {
         alert("Commande non reconnue");
     }
     return false;
-  }
+}
