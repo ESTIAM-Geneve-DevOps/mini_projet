@@ -1,15 +1,15 @@
-import { terminal_input } from "/app/script/terminal_input.js";
+import express from "express";
+import { terminal_input } from "../app/script/terminal_input";
 
-const express = require('express');
 const app = express();
-const PORT = 3000;
+const port = 3000;
 
 app.use( express.json() )
 
 app.get('/', (req, res) => {
-    console.log(terminal_input(req));
-    res.send ({
-
-    });
+    console.log(terminal_input(req.body));
 });
 
+app.listen(port, () =>{
+    console.log("serveur demarre avec succes sur le port 3000");
+})
