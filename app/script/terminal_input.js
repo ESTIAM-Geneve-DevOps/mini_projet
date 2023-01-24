@@ -1,4 +1,4 @@
-export function terminal_input(input) {
+function terminal_input(input) {
     if (input == null) {
       var input = document.getElementById("inputCommand").value;
     }
